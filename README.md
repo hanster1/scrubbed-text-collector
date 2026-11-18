@@ -1,13 +1,18 @@
 # Scrubbed Text Collector
 
-These instructions will walk you through how to scrub your texts of sensitive information using a local LLM running on your own computer. Claude, ChatGPT, Muse, or Grok can search the scrubbed archive you approve. The original messages stay on your computer, outside the cloud agents' access.
+These instructions will walk you through collecting and filtering your texts on your own computer. Claude, ChatGPT, Muse, or Grok can search the archive you approve.
 
 This README is instructions for humans. The [PLAYBOOK](PLAYBOOK.md) is instructions for agents.
 
+## Choose how to filter your texts
+
+- **Private setup with a local LLM (default).** Use a model on your computer to help filter sensitive content based on what you choose to exclude. Your original messages stay on your computer. Cloud agents can access only the scrubbed archive you approve.
+- **Simple cleanup with no local LLM.** Ask Codex or Claude Code to set up local rules that remove messages such as two-factor authentication codes and spam. The rules can run without sharing your texts with the setup agent. If you want the setup agent to look at selected messages to help tune the rules, you can approve that separately. Those messages may contain private information, and the agent's cloud provider can process the text it reads. This option may leave other sensitive information in the archive, so review what you're comfortable sharing.
+
 ### By the end of your setup you will have done the following:
 
-1. Collect the full text history your messaging service makes available into a `collected-texts` folder on your computer without exposing any of these texts to cloud agents.
-2. Scrub your texts of sensitive information using a local LLM that runs on your computer and saves your scrubbed text archive into a `scrubbed-texts` folder.
+1. Collect the full text history your messaging service makes available into a `collected-texts` folder on your computer.
+2. Filter your texts with the option you chose and save the archive you approve into a `scrubbed-texts` folder.
 3. Connect your cloud agents of choice to the `scrubbed-texts` folder to get intelligent answers about your text history.
 4. Keep your text collection and scrubbing running on your own computer so that your cloud agents can access your latest scrubbed texts after each update.
 
