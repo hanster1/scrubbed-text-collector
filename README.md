@@ -4,7 +4,7 @@ These instructions will walk you through how to scrub your texts of sensitive in
 
 This README is instructions for humans. The [PLAYBOOK](PLAYBOOK.md) is instructions for agents.
 
-By the end of your setup you will have done the following:
+### By the end of your setup you will have done the following:
 
 1. Collect your full text history into a `collected-texts` folder on your computer without exposing any of these texts to cloud agents.
 2. Scrub your texts of sensitive information using a local LLM that runs on your computer and saves your scrubbed text archive into a `scrubbed-texts` folder.
