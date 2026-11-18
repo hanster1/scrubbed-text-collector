@@ -25,12 +25,14 @@ Your scrubbed text collector is only working while your computer is on. Therefor
 ## Setup Overview
 
 1. If you don’t already have the agent CLI of your choice installed on your computer, install it.
-2. Create a new `scrubbed-text-collector` project folder, [run your agent in that folder](#create-a-project-folder-and-launch-your-agent), and tell them to follow the playbook.
+2. Create a new project folder on your computer called `scrubbed-text-collector`.
+3. Run your agent CLI from the `scrubbed-text-collector` project folder.
+4. Paste the following prompt to your agent:
 
    ```text
-   Follow https://github.com/hanster1/scrubbed-text-collector/blob/main/PLAYBOOK.md to set up scrubbed-text-collector on this computer.
+   Follow https://github.com/hanster1/scrubbed-text-collector to set up scrubbed-text-collector on this computer.
    ```
-3. Allow your agent to automatically submit issues to improve this setup guide if they run into problems along the way.
+5. Allow your agent to automatically submit issues to improve this setup guide if they run into problems along the way.
 
 ## Detailed Instructions
 
@@ -74,7 +76,7 @@ For installation help, see the official [Codex](https://learn.chatgpt.com/docs/c
 
 ### Create a project folder and launch your agent
 
-Open Terminal on Mac or PowerShell on Windows. Copy and paste the entire block for your agent. If the folder already exists, skip the `mkdir` line.
+Open Terminal on Mac or PowerShell on Windows. Paste the commands for your chosen agent to create a new `scrubbed-text-collector` folder and launch it.
 
 **Codex:**
 
@@ -82,7 +84,7 @@ Open Terminal on Mac or PowerShell on Windows. Copy and paste the entire block f
 cd ~
 mkdir scrubbed-text-collector
 cd scrubbed-text-collector
-codex "Follow https://github.com/hanster1/scrubbed-text-collector/blob/main/PLAYBOOK.md to set up scrubbed-text-collector on this computer."
+codex
 ```
 
 **Claude Code:**
@@ -91,5 +93,5 @@ codex "Follow https://github.com/hanster1/scrubbed-text-collector/blob/main/PLAY
 cd ~
 mkdir scrubbed-text-collector
 cd scrubbed-text-collector
-claude "Follow https://github.com/hanster1/scrubbed-text-collector/blob/main/PLAYBOOK.md to set up scrubbed-text-collector on this computer."
+claude
 ```
