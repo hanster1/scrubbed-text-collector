@@ -32,7 +32,7 @@ Your scrubbed text collector is only working while your computer is on. Therefor
    ```text
    Follow https://github.com/hanster1/scrubbed-text-collector to set up scrubbed-text-collector on this computer.
    ```
-5. Ask your agent to flag setup problems and prepare a report that can improve the instructions for other agents. Review the report before it’s posted.
+5. Allow your agent to automatically submit issues to improve this setup guide if they run into problems along the way.
 
 ## Detailed Instructions
 
