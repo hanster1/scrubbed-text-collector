@@ -7,7 +7,7 @@ This README is instructions for humans. The [PLAYBOOK](PLAYBOOK.md) is instructi
 ## Choose how to filter your texts
 
 - **Private setup with a local LLM (default).** Use a model on your computer to help filter sensitive content based on what you choose to exclude. Your original messages stay on your computer. Cloud agents can access only the scrubbed archive you approve.
-- **Simple cleanup with no local LLM.** Ask Codex or Claude Code to set up local rules that remove messages such as two-factor authentication codes and spam. The rules can run without sharing your texts with the setup agent. If you want the setup agent to look at selected messages to help tune the rules, you can approve that separately. Those messages may contain private information, and the agent's cloud provider can process the text it reads. This option may leave other sensitive information in the archive, so review what you're comfortable sharing.
+- **Simple cleanup with Codex or Claude Code.** Let your setup agent read and filter your texts for things like two-factor codes and spam. Your texts are processed by the agent’s cloud provider.
 
 ### By the end of your setup you will have done the following:
 
