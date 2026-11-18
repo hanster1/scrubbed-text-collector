@@ -2,9 +2,7 @@
 
 These instructions will walk you through how to scrub your texts of sensitive information using a local LLM running on your own computer so that you can securely give your text history to Claude, ChatGPT, Muse, or Grok without exposing sensitive information.
 
-This README is instructions for humans.
-
-The [PLAYBOOK](PLAYBOOK.md) is instructions for agents.
+This README is instructions for humans. The [PLAYBOOK](PLAYBOOK.md) is instructions for agents.
 
 By the end of your setup you will have done the following:
 
