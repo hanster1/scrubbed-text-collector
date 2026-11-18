@@ -24,7 +24,7 @@ Your scrubbed text collector is only working while your computer is on. Therefor
 
 ## Setup Overview
 
-1. If you don’t already have the agent CLI of your choice installed on your computer, install it.
+1. Install your agent CLI, if you haven't already.
 2. Create a new project folder on your computer called `scrubbed-text-collector`.
 3. Run your agent CLI from the `scrubbed-text-collector` project folder.
 4. Paste the following prompt to your agent:
