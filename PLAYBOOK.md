@@ -55,7 +55,11 @@ Backfill to the earliest available history within the agreed scope. Record where
 
 ## 3. Connect the scrubbed folder and verify answers
 
-Use the assistant's supported access to a private folder. A connected computer or an existing storage connector can work if its effective permissions limit the assistant to `scrubbed-texts`. Use a dedicated destination containing only approved files. Check that sync delivers updates and deletions and that the assistant refreshes its view. A synced file's presence alone does not prove that the assistant can search it. Keep this setup to supported folder access and use the snapshot fallback only if the user accepts it.
+Choose a route supported by the user's assistant, account, and computer. A connected computer or an existing storage connector can work if its effective permissions limit the assistant to a dedicated destination containing only `scrubbed-texts`. Use the snapshot fallback only if the user accepts it.
+
+If the user already uses Google Drive on Mac or Windows, consider [Google Drive for desktop](https://support.google.com/drive/answer/10838124) to sync only the approved `scrubbed-texts` files to a private Drive folder that the assistant's connector can reach. Check the actual account's connector permissions, supported folder locations, and the archive's file format. Desktop sync puts files in Drive. The assistant still needs a supported connection that can search them.
+
+Before connecting the real archive, use a harmless file in the archive's format. Ask the assistant to find and cite it. Update and then delete the file, and verify from fresh requests that the assistant sees the change and stops retrieving the deleted file after the connector refreshes. Verify that the connection cannot reach `collected-texts` or private staging.
 
 In each intended answering interface, ask for a detail from an older approved message. Verify that the answer cites the archive and that the reference resolves to the approved file. If Loom is enabled and has approved output, verify a cited answer from a scrubbed transcript too. Repeat the private-store access checks after connecting the real output.
 
@@ -69,8 +73,8 @@ Replace `CONNECTION` with the verified route.
 
 ## 4. Verify automatic updates and hand off
 
-- Schedule collection, scrubbing, and any sync with the host's normal job scheduler. Use bounded retries. Track the last successful collection, last safe scrubbed release, and last update verified in each answering assistant separately.
-- Verify that a later scheduled release reaches each answering assistant without manual upload. Use an approved record or synthetic fixture the assistant could not already have seen. Check that jobs resume and catch up after the host comes back online. If an update or restart check is pending, say exactly what remains unverified.
+- Use the host's normal job scheduler and bounded retries. Schedule collection, scrubbing, and any sync to resume after the computer starts without anyone reopening the setup agent. Cover planned reboots, unexpected restarts, and power outages once the computer is back on. Check whether a local sign-in, unlock, or sync app launch is required, and tell the user what must happen first. Track the last successful collection, last safe scrubbed release, and last update verified in each answering assistant separately.
+- Test an interrupted run with synthetic data. Verify that the last safe release stays available and that the next run catches up without duplicating records. After an authorized reboot, check that the jobs resume and that a later scheduled release reaches each answering assistant without manual upload. Use an approved record or synthetic fixture the assistant could not already have seen. If a recovery or update check is pending, say exactly what remains unverified.
 - Leave private local notes with versions, paths, permissions, schedule, and commands for checking status, pausing, resuming, and repairing the setup. Record the filtering choice and any cloud access the user approved. Give the user a short handoff covering collection dates and gaps, filtering limits and review status, verified assistants and Loom coverage if enabled, and when the last automatic update reached each assistant.
 
 **Done when** the chosen filter is verified, the first release and a later scheduled release are visible in each configured assistant, and restart recovery is verified. If the user chose the private setup and its local LLM is unavailable, or if the folder connection or automatic updates are unavailable, report a partial setup.
