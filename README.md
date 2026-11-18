@@ -21,7 +21,11 @@ Your scrubbed text collector is only working while your computer is on. Therefor
 2. Paste this prompt for your agent:
 
    ```text
-   Follow the playbook at https://github.com/hanster1/scrubbed-text-collector to get a scrubbed text archive set up on this computer. Create a new scrubbed-text-collector project folder, change directories into that folder, and walk me through the playbook.
+   Create a folder called scrubbed-text-collector and use it as the working
+   directory for this setup. Follow the playbook at
+   https://github.com/hanster1/scrubbed-text-collector/blob/main/PLAYBOOK.md
+   to set up a scrubbed text archive on this computer. Walk me through the
+   choices and handle the setup steps you can.
    ```
 
 ## Choose how to filter your texts
