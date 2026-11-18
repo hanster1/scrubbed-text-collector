@@ -4,11 +4,6 @@ These instructions will walk you through collecting and filtering your texts on 
 
 This README is instructions for humans. The [PLAYBOOK](PLAYBOOK.md) is instructions for agents.
 
-## Choose how to filter your texts
-
-- **Private setup with a local LLM (default).** Use a model on your computer to help filter sensitive content based on what you choose to exclude. Your original messages stay on your computer. Cloud agents can access only the scrubbed archive you approve.
-- **Simple cleanup with Codex or Claude Code.** Let your setup agent read and filter your texts for things like two-factor codes and spam. Your texts are processed by the agent’s cloud provider.
-
 ### By the end of your setup you will have done the following:
 
 1. Collect the full text history your messaging service makes available into a `collected-texts` folder on your computer.
@@ -16,82 +11,24 @@ This README is instructions for humans. The [PLAYBOOK](PLAYBOOK.md) is instructi
 3. Connect your cloud agents of choice to the `scrubbed-texts` folder to get intelligent answers about your text history.
 4. Keep your text collection and scrubbing running on your own computer so that your cloud agents can access your latest scrubbed texts after each update.
 
-Your setup agent will also ask whether you want to include transcripts of Loom videos shared in your texts. Text messages are the default. Loom transcripts are added only if you choose to enable them.
-
-## A Home Server
+## Home Server
 
 Your scrubbed text collector is only working while your computer is on. Therefore, it is best to go through this setup on a computer that you can leave on. If the computer gets turned off, then text collection and scrubbing gets turned off, which means your agent is temporarily blind to your latest texts until your computer is turned back on.
 
-## Setup Overview
+## Get Started
 
-1. Install your agent CLI, like Claude Code or Codex, if you haven't already.
-2. Create a new project folder on your computer called `scrubbed-text-collector`.
-3. Run your agent CLI from the `scrubbed-text-collector` project folder.
-4. Paste the following prompt to your agent:
+1. Run Claude Code or Codex on your computer.
+2. Paste this prompt for your agent:
 
    ```text
-   Follow https://github.com/hanster1/scrubbed-text-collector to set up scrubbed-text-collector on this computer.
+   Follow the playbook at https://github.com/hanster1/scrubbed-text-collector to get a scrubbed text archive set up on this computer. Create a new scrubbed-text-collector project folder, change directories into that folder, and walk me through the playbook.
    ```
-5. Allow your agent to automatically submit issues to improve this setup guide if they run into problems along the way.
 
-## Detailed Instructions
+## Choose how to filter your texts
 
-### Install an Agent CLI
+- **Private setup with a local LLM (default).** Use a model on your computer to help filter sensitive content based on what you choose to exclude. Your original messages stay on your computer. Cloud agents can access only the scrubbed archive you approve.
+- **Simple cleanup with Codex or Claude Code.** Let your setup agent read and filter your texts for things like two-factor codes and spam. Your texts are processed by the agent’s cloud provider.
 
-An agent CLI is an interface for Claude or ChatGPT to run on your computer and make changes to your computer using a command line interface (CLI). You need to already have a subscription with Claude or ChatGPT to use their agent CLI.
+## Loom Videos, Media, and More
 
-#### For Mac
-
-Press Command-Space, type Terminal, and press Return. Paste one install command.
-
-**Codex:**
-
-```sh
-curl -fsSL https://chatgpt.com/codex/install.sh | sh
-```
-
-**Claude Code:**
-
-```sh
-curl -fsSL https://claude.ai/install.sh | bash
-```
-
-#### For Windows
-
-Open Start, type PowerShell, and open it. Paste one install command.
-
-**Codex:**
-
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"
-```
-
-**Claude Code:**
-
-```powershell
-irm https://claude.ai/install.ps1 | iex
-```
-
-For installation help, see the official [Codex](https://learn.chatgpt.com/docs/codex/cli) or [Claude Code](https://code.claude.com/docs/en/quickstart) instructions.
-
-### Create a project folder and launch your agent
-
-Open Terminal on Mac or PowerShell on Windows. Paste the commands for your chosen agent to create a new `scrubbed-text-collector` folder and launch it.
-
-**Codex:**
-
-```text
-cd ~
-mkdir scrubbed-text-collector
-cd scrubbed-text-collector
-codex
-```
-
-**Claude Code:**
-
-```text
-cd ~
-mkdir scrubbed-text-collector
-cd scrubbed-text-collector
-claude
-```
+Texts are included by default, but your scrubbed text archive can also include Loom video transcripts, images, and more. Just ask your agent to help you include those parts of your texts into your scrubbed-text archive.
