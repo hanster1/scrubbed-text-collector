@@ -1,15 +1,17 @@
 # Scrubbed Text Collector
 
-These instructions will walk you through how to scrub your texts of sensitive information using a local LLM running on your own computer so that you can securely give your text history to Claude, ChatGPT, Muse, or Grok without exposing sensitive information.
+These instructions will walk you through how to scrub your texts of sensitive information using a local LLM running on your own computer. Claude, ChatGPT, Muse, or Grok can search the scrubbed archive you approve. The original messages stay on your computer, outside the cloud agents' access.
 
 This README is instructions for humans. The [PLAYBOOK](PLAYBOOK.md) is instructions for agents.
 
 ### By the end of your setup you will have done the following:
 
-1. Collect your full text history into a `collected-texts` folder on your computer without exposing any of these texts to cloud agents.
+1. Collect the full text history your messaging service makes available into a `collected-texts` folder on your computer without exposing any of these texts to cloud agents.
 2. Scrub your texts of sensitive information using a local LLM that runs on your computer and saves your scrubbed text archive into a `scrubbed-texts` folder.
 3. Connect your cloud agents of choice to the `scrubbed-texts` folder to get intelligent answers about your text history.
-4. Keep your text collection and scrubbing running on your own computer so that your cloud agents always have access to your latest texts.
+4. Keep your text collection and scrubbing running on your own computer so that your cloud agents can access your latest scrubbed texts after each update.
+
+Your setup agent will also ask whether you want to include transcripts of Loom videos shared in your texts. Text messages are the default. Loom transcripts are added only if you choose to enable them.
 
 ## A Home Server
 
@@ -25,6 +27,7 @@ Your scrubbed text collector is only working while your computer is on. Therefor
    ```text
    Follow https://github.com/hanster1/scrubbed-text-collector to set up scrubbed-text-collector on this computer.
    ```
+5. Ask your agent to flag setup problems and prepare a report that can improve the instructions for other agents. Review the report before it’s posted.
 
 ## Detailed Instructions
 
@@ -68,14 +71,14 @@ For installation help, see the official [Codex](https://learn.chatgpt.com/docs/c
 
 ### Create a project folder and launch your agent
 
-Open Terminal on Mac or PowerShell on Windows. Paste the commands for your chosen agent to create a new `minbox-setup` folder and launch it.
+Open Terminal on Mac or PowerShell on Windows. Paste the commands for your chosen agent to create a new `scrubbed-text-collector` folder and launch it.
 
 **Codex:**
 
 ```text
 cd ~
-mkdir minbox-setup
-cd minbox-setup
+mkdir scrubbed-text-collector
+cd scrubbed-text-collector
 codex
 ```
 
@@ -83,7 +86,7 @@ codex
 
 ```text
 cd ~
-mkdir minbox-setup
-cd minbox-setup
+mkdir scrubbed-text-collector
+cd scrubbed-text-collector
 claude
 ```
