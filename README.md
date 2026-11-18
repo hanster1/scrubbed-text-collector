@@ -8,9 +8,9 @@ The [PLAYBOOK](PLAYBOOK.md) is instructions for agents.
 
 By the end of your setup you will have done the following:
 
-1. Collect your full text history into a collected-texts folder on your computer without exposing any of these texts to cloud agents.
-2. Scrub your texts of sensitive information using a local LLM that runs on your computer and saves your scrubbed text archive into a scrubbed-texts folder.
-3. Connect your cloud agents of choice to the scrubbed-texts folder to get intelligent answers about your text history.
+1. Collect your full text history into a `collected-texts` folder on your computer without exposing any of these texts to cloud agents.
+2. Scrub your texts of sensitive information using a local LLM that runs on your computer and saves your scrubbed text archive into a `scrubbed-texts` folder.
+3. Connect your cloud agents of choice to the `scrubbed-texts` folder to get intelligent answers about your text history.
 4. Keep your text collection and scrubbing running on your own computer so that your cloud agents always have access to your latest texts.
 
 ## A Home Server
@@ -20,8 +20,8 @@ Your scrubbed text collector is only working while your computer is on. Therefor
 ## Setup Overview
 
 1. If you don’t already have the agent CLI of your choice installed on your computer, install it.
-2. Create a new project folder on your computer called scrubbed-text-collector.
-3. Run your agent CLI from the scrubbed-text-collector project folder.
+2. Create a new project folder on your computer called `scrubbed-text-collector`.
+3. Run your agent CLI from the `scrubbed-text-collector` project folder.
 4. Paste the following prompt to your agent:
 
    ```text
@@ -70,7 +70,7 @@ For installation help, see the official [Codex](https://learn.chatgpt.com/docs/c
 
 ### Create a project folder and launch your agent
 
-Open Terminal on Mac or PowerShell on Windows. Paste the commands for your chosen agent to create a new minbox-setup folder and launch it.
+Open Terminal on Mac or PowerShell on Windows. Paste the commands for your chosen agent to create a new `minbox-setup` folder and launch it.
 
 **Codex:**
 
