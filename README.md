@@ -25,7 +25,11 @@ Your scrubbed text collector is only working while your computer is on. Therefor
 ## Setup Overview
 
 1. If you don’t already have the agent CLI of your choice installed on your computer, install it.
-2. [Run the setup command block for your agent](#create-a-project-folder-and-launch-your-agent). It creates the `scrubbed-text-collector` folder, opens the agent there, and passes in the setup prompt.
+2. Create a new `scrubbed-text-collector` project folder, [run your agent in that folder](#create-a-project-folder-and-launch-your-agent), and tell them to follow the playbook.
+
+   ```text
+   Follow https://github.com/hanster1/scrubbed-text-collector/blob/main/PLAYBOOK.md to set up scrubbed-text-collector on this computer.
+   ```
 3. Allow your agent to automatically submit issues to improve this setup guide if they run into problems along the way.
 
 ## Detailed Instructions
@@ -78,7 +82,7 @@ Open Terminal on Mac or PowerShell on Windows. Copy and paste the entire block f
 cd ~
 mkdir scrubbed-text-collector
 cd scrubbed-text-collector
-codex "Follow https://github.com/hanster1/scrubbed-text-collector to set up scrubbed-text-collector on this computer."
+codex "Follow https://github.com/hanster1/scrubbed-text-collector/blob/main/PLAYBOOK.md to set up scrubbed-text-collector on this computer."
 ```
 
 **Claude Code:**
@@ -87,5 +91,5 @@ codex "Follow https://github.com/hanster1/scrubbed-text-collector to set up scru
 cd ~
 mkdir scrubbed-text-collector
 cd scrubbed-text-collector
-claude "Follow https://github.com/hanster1/scrubbed-text-collector to set up scrubbed-text-collector on this computer."
+claude "Follow https://github.com/hanster1/scrubbed-text-collector/blob/main/PLAYBOOK.md to set up scrubbed-text-collector on this computer."
 ```
